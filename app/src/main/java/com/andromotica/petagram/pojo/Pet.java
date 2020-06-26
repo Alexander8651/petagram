@@ -1,6 +1,6 @@
-package com.andromotica.petagram;
+package com.andromotica.petagram.pojo;
 
-class Pet {
+public class Pet {
 
     private int foto;
     private String nombre;

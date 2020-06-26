@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
+
+import com.andromotica.petagram.adapters.PetagramAdapter;
+import com.andromotica.petagram.pojo.Pet;
 
 import java.util.ArrayList;
 

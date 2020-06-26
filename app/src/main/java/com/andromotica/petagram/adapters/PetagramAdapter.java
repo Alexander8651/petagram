@@ -1,4 +1,4 @@
-package com.andromotica.petagram;
+package com.andromotica.petagram.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,16 +9,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.andromotica.petagram.pojo.Pet;
+import com.andromotica.petagram.R;
+
 import java.util.ArrayList;
 
-class PetagramAdapter extends RecyclerView.Adapter<PetagramAdapter.PetViewHolder> {
-    ArrayList<Pet> pets;
+public class PetagramAdapter extends RecyclerView.Adapter<PetagramAdapter.PetViewHolder> {
 
+    ArrayList<Pet> pets;
     public PetagramAdapter(ArrayList<Pet> pets){
         this.pets = pets;
     }
-
-
     @NonNull
     @Override
     public PetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
