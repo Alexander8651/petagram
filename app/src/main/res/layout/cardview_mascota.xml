@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
         <ImageView
             android:id="@+id/petImage"
             android:layout_width="match_parent"
@@ -20,13 +21,14 @@
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:orientation="horizontal">
+           android:orientation="horizontal"
+           android:layout_marginTop="5dp">
 
-           <ImageView
+           <Button
                android:id="@+id/hueso"
                android:layout_width="30dp"
                android:layout_height="30dp"
-               android:src="@drawable/ic_hueso"
+               android:background="@drawable/ic_hueso"
                android:layout_marginLeft="5dp"
                android:layout_marginBottom="2dp"/>
            <TextView
@@ -46,8 +48,8 @@
                android:layout_toStartOf="@id/huesoamarillo"
                android:layout_marginRight="20dp"
                android:layout_marginTop="6dp"
-               android:textSize="10sp"
-               android:text="5"/>
+               android:textSize="20sp"
+               android:text="0"/>
 
            <ImageView
                android:id="@+id/huesoamarillo"

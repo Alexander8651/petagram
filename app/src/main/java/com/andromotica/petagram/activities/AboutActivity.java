@@ -1,8 +1,10 @@
-package com.andromotica.petagram;
+package com.andromotica.petagram.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.andromotica.petagram.R;
 
 public class AboutActivity extends AppCompatActivity {
 

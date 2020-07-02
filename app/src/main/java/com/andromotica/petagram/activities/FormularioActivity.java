@@ -1,4 +1,4 @@
-package com.andromotica.petagram;
+package com.andromotica.petagram.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.andromotica.petagram.R;
 
 import java.util.Properties;
 

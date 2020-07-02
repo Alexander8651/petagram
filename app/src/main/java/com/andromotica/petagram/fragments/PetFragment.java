@@ -41,19 +41,19 @@ public class PetFragment extends Fragment {
 
     private void iniciarMiPet(){
         pets = new ArrayList<Pet>();
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.betel, "Betel"));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
+        pets.add(new Pet(R.drawable.betel, "Betel", 2));
     }
 
     private void iniciarAdaptador(){

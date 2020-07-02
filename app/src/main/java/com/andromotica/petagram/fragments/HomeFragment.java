@@ -13,14 +13,17 @@ import android.view.ViewGroup;
 import com.andromotica.petagram.R;
 import com.andromotica.petagram.adapters.PetagramAdapter;
 import com.andromotica.petagram.pojo.Pet;
+import com.andromotica.petagram.presentador.IRecyclerViewFragmentPresentador;
+import com.andromotica.petagram.presentador.RecyclerViewFragmentPresentador;
 
 import java.util.ArrayList;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements IRecyclerViewHomeFragment  {
 
     ArrayList<Pet> pets;
     private RecyclerView listaPets;
+    private IRecyclerViewFragmentPresentador presentador;
 
 
 
@@ -32,28 +35,27 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         listaPets = (RecyclerView) v.findViewById(R.id.listaPets);
+        presentador = new RecyclerViewFragmentPresentador(this,getContext());
 
-        LinearLayoutManager llm = new LinearLayoutManager(getContext());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
-        listaPets.setLayoutManager(llm);
-
-        inicializarListaPets();
-        inicializadorAdaptador();
         return v;
     }
 
-    public void inicializadorAdaptador(){
-        PetagramAdapter adaptador = new PetagramAdapter(pets);
-        listaPets.setAdapter(adaptador);
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaPets.setLayoutManager(llm);
+
     }
 
-    public void inicializarListaPets(){
-        pets = new ArrayList<Pet>();
-        pets.add(new Pet(R.drawable.betel, "Betel"));
-        pets.add(new Pet(R.drawable.angel, "Angel"));
-        pets.add(new Pet(R.drawable.cosiris, "Cosiris"));
-        pets.add(new Pet(R.drawable.gucci, "Gucci"));
-        pets.add(new Pet(R.drawable.canela, "Canela"));
+    @Override
+    public PetagramAdapter crearAdaptador(ArrayList<Pet> pets) {
+        return new PetagramAdapter(pets, getActivity());
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(PetagramAdapter adaptador) {
+        listaPets.setAdapter(adaptador);
     }
 }

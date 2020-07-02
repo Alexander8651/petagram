@@ -1,11 +1,9 @@
-package com.andromotica.petagram;
+package com.andromotica.petagram.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -13,14 +11,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.andromotica.petagram.R;
 import com.andromotica.petagram.adapters.PageAdapter;
-import com.andromotica.petagram.adapters.PetagramAdapter;
 import com.andromotica.petagram.fragments.HomeFragment;
 import com.andromotica.petagram.fragments.PetFragment;
-import com.andromotica.petagram.pojo.Pet;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
