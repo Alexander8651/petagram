@@ -93,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(this, AboutActivity.class);
                 startActivity(intent1);
                 break;
+            case R.id.configurarcuenta:
+                Intent intent2 = new Intent(this, ConfigurarCuentaActivity.class);
+                startActivity(intent2);
+                break;
         }
         return true;
     }

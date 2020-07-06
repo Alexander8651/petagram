@@ -1,5 +1,7 @@
 package com.andromotica.petagram.adapters;
 
+import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,27 +10,21 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.andromotica.petagram.R;
-import com.andromotica.petagram.pojo.Pet;
+import com.andromotica.petagram.pojo.MiPet;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class MiPetAdapter extends RecyclerView.Adapter<MiPetAdapter.MyPetViewHolder> {
+    ArrayList<MiPet> miPets;
+    Activity activity;
 
+    public MiPetAdapter(ArrayList<MiPet> pets,  Activity activity){
 
-    ArrayList<Pet> pets;
-
-    public MiPetAdapter(ArrayList<Pet> pets){
-
-        this.pets = pets;
+        this.miPets = pets;
+        this.activity = activity;
     }
-
-    @Override
-    public int getItemCount() {
-        return pets.size();
-    }
-
     @NonNull
     @Override
     public MyPetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -36,23 +32,38 @@ public class MiPetAdapter extends RecyclerView.Adapter<MiPetAdapter.MyPetViewHol
         return new MyPetViewHolder(view);
     }
 
-
-
     @Override
     public void onBindViewHolder(@NonNull MiPetAdapter.MyPetViewHolder holder, int position) {
-        final Pet pet = pets.get(position);
-        holder.imgFotoProfile.setImageResource(R.drawable.betel);
+        final MiPet miPet = miPets.get(position);
+        holder.description.setText(miPet.getDescripcion());
+
+        Picasso.with(activity)
+                .load(miPet.getFoto())
+                .placeholder(R.drawable.ic_hueso)
+                .into(holder.petImage);
     }
 
+    @Override
+    public int getItemCount() {
+        return miPets.size();
+    }
+
+
     public static class MyPetViewHolder extends  RecyclerView.ViewHolder{
-        private ImageView imgFotoProfile;
-        private TextView rating;
-        private ImageView imgHuesoAmarrillo;
+
+        TextView description;
+        ImageView petImage;
+
 
         public MyPetViewHolder(View itemView) {
             super(itemView);
-            imgFotoProfile = (ImageView) itemView.findViewById(R.id.petImage);
-            rating = (TextView) itemView.findViewById(R.id.petRaiting);
+
+            description = (TextView) itemView.findViewById(R.id.miPetDesciption);
+            petImage = (ImageView) itemView.findViewById(R.id.petImage);
+
+
+
+
         }
     }
 }
