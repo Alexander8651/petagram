@@ -25,7 +25,23 @@ public class RestApiAdapter {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(PetResponse.class, new PetDeserializador());
         return  gsonBuilder.create();
-
     }
 
+    public EndpointApi establecerConecionRestApiRegistroDispositivo(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstantesResApi.ROOT_URL_POST)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                ;
+        return retrofit.create(EndpointApi.class);
+    }
+
+    public EndpointApi establecerConecionRestApiInstagramDataUser(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstantesResApi.ROOT_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                ;
+        return retrofit.create(EndpointApi.class);
+    }
 }

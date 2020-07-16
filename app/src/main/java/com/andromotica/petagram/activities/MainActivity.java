@@ -97,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(this, ConfigurarCuentaActivity.class);
                 startActivity(intent2);
                 break;
+            case R.id.configurarnotificaciones:
+                Intent intent3 = new Intent(this, RecibirNotificacionesActivity.class);
+                startActivity(intent3);
+                break;
         }
         return true;
     }

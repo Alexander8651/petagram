@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 public class BaseDatos extends SQLiteOpenHelper {
 
-    int sumarUno = 1;
 
     public BaseDatos( Context context) {
         super(context, ConstantesBaseDatos.DATABASE_NAME, null, ConstantesBaseDatos.DATABASE_VERSION);
@@ -87,9 +86,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         if (registros.moveToNext()){
             likes = registros.getInt(0);
         }
-
         db.close();
-
         return likes;
     }
 

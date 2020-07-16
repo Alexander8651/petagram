@@ -8,8 +8,16 @@ public final class ConstantesResApi {
     public final static String KEY_GET_INFORMATION_USER= "me/media?fields=id,media_url,caption,timestamp,media_type,permalink,thumbnail_url,username";
     public final static String URL_GET_RECENT_MEDIA_USER_BETELUCANELU= KEY_GET_INFORMATION_USER + KEY_ACCES_TOKEN + ACCES_TOKEN;
 
-    public final static String ACCES_TOKEN2 = "IGQVJWSHFEdDlFQVZAVYXIyX2M1RUkyU09ZAQ2pqcFViTFo2TzhEZAjdBLTRiUTltN2UxSEp2Mi1VWkN6OHl3RV96SVlWN1AxSHpvMWhsQTlYLTdkZA0g1YkxZASlNkZATdndk9icTEydHZAn";
+    public final static String ACCES_TOKEN2 = "IGQVJYU1VDMDNKR0dIdlR1RV9NRGp6c2RsVzhhV1NJRXZACNGM2SUMxLW9nRU5nOU5SSXZAOeWdZAUEtLRlpzemZAZAVFh4UFZAvYzl6emwwYzh5YzlYY3BzTXAzSl9HbE5iVTd6UVZAobEV3";
     public static final String KEY_ACCES_TOKEN2 = "&access_token=";
     public final static String KEY_GET_INFORMATION_USER2= "me/media?fields=id,media_url,caption,timestamp,media_type,permalink,thumbnail_url,username";
-    public final static String URL_GET_RECENT_MEDIA_USER_ALEXANDER8651= KEY_GET_INFORMATION_USER2 + KEY_ACCES_TOKEN2 + ACCES_TOKEN2;
+    public final static String URL_GET_RECENT_MEDIA_USER_JULYMORA = KEY_GET_INFORMATION_USER2 + KEY_ACCES_TOKEN2 + ACCES_TOKEN2;
+
+    public static final String ROOT_URL_POST="https://secret-brushlands-22663.herokuapp.com/";
+    public static final String KEY_POST_ID_DISPOSITIVO = "registrar-usuario/";
+
+    public final static String KEY_GETINFORMATION_INSTAGRAMUSER="me?fields=ig_id,username";
+
+    public final static String URL_GET__USERDATA_BETELUCANELU = KEY_GETINFORMATION_INSTAGRAMUSER +KEY_ACCES_TOKEN+ACCES_TOKEN;
+
 }

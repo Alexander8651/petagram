@@ -27,7 +27,6 @@ public class PetDeserializador implements JsonDeserializer<PetResponse> {
         JsonArray petResponseData = json.getAsJsonObject().getAsJsonArray(JsonKeys.MEDIA_RESPONSE_ARRAY);
 
         petResponse.setMiPets(deserializarContactoDeJson(petResponseData));
-        Log.d("Alexander8651", petResponse.toString());
 
         return petResponse;
     }

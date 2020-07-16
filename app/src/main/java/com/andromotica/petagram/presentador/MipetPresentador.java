@@ -43,7 +43,7 @@ public class MipetPresentador implements IMipetPresentador {
         Gson gsonMediaRecent = restApiAdapter.construyeGsonDeserializadorMediaRecent();
         EndpointApi endpointApi = restApiAdapter.establecesConexionRestApiInstagram(gsonMediaRecent);
 
-        Call<PetResponse> petResponseCall = endpointApi.getAllMediaBeteluCanelu();
+        Call<PetResponse> petResponseCall = endpointApi.getAllMediaJulyMora444();
         petResponseCall.enqueue(new Callback<PetResponse>() {
             @Override
             public void onResponse(Call<PetResponse> call, Response<PetResponse> response) {
